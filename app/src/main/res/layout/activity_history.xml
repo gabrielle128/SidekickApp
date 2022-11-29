@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/bgcolor"
+    tools:context=".wallet.history">
+
+    <LinearLayout
+        android:id="@+id/headerbudget"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/bgcolor"
+        android:elevation="20dp">
+
+        <ImageButton
+            android:id="@+id/btnBackhistory"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:backgroundTint="@color/bgcolor"
+            app:srcCompat="@drawable/back" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_weight="4"
+            android:fontFamily="@font/gaegu_bold"
+            android:paddingTop="15dp"
+            android:text="History"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="25dp" />
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center"
+            android:layout_marginRight="30dp"
+            android:background="?selectableItemBackgroundBorderless"
+            android:backgroundTint="@color/bgcolor"
+            android:scaleType="fitXY"
+            app:srcCompat="@drawable/blank" />
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/btnSearch"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="30dp"
+                android:backgroundTint="@color/yellow"
+                android:fontFamily="@font/gaegu_bold"
+                android:text="Search History Spending"
+                android:textAllCaps="false"
+                android:textColor="@color/black"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/historyTotalAmountSpent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_margin="10dp"
+                android:fontFamily="@font/gaegu_bold"
+                android:gravity="center_horizontal"
+                android:text="0.00"
+                android:textColor="@color/black"
+                android:textSize="25sp"
+                android:visibility="gone" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/todayRV"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="20dp"
+                android:visibility="gone" />
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

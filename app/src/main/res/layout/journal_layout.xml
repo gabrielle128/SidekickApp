@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="7dp"
+    android:paddingRight="15dp"
+    android:paddingLeft="15dp"
+    android:paddingBottom="7dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/journalcard"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="5dp"
+        app:cardMaxElevation="100dp"
+        app:cardElevation="2dp"
+        android:layout_margin="5dp">
+
+        <RelativeLayout
+            android:id="@+id/relativeLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/journalLL"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/journaltitle"
+                        android:padding="10dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="10dp"
+                        android:text="Title"
+                        android:fontFamily="@font/gaegu_bold"
+                        android:textSize="20sp"
+                        android:textColor="@color/black"
+                        android:layout_weight="1">
+
+                    </TextView>
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:id="@+id/menupopbtn"
+                        android:layout_weight="0"
+                        android:src="@drawable/more_vert">
+                    </ImageView>
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/journalcontent"
+                    android:padding="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:text="Journal content"
+                    android:fontFamily="@font/gaegu_regular"
+                    android:textSize="18sp"
+                    android:textColor="@color/black">
+
+                </TextView>
+
+                <TextView
+                    android:id="@+id/journaldateTime"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/journalcontent"
+                    android:fontFamily="@font/gaegu_light"
+                    android:paddingRight="15dp"
+                    android:paddingBottom="10dp"
+                    android:text="Date and Time"
+                    android:textAlignment="textEnd"
+                    android:textColor="@color/black"
+                    android:textSize="12sp" />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>

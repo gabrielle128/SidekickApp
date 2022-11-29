@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bgcolor"
+    tools:context=".calendar.WeekView">
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/botNavView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:itemBackground="@color/bgcolor"
+        app:itemIconTint="@drawable/selector"
+        app:itemTextColor="@drawable/selector"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_alignParentBottom="true"
+        app:menu="@menu/bottom_navmenu" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/botNavView"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/headerweekLL"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/bgcolor"
+            android:elevation="20dp">
+
+            <ImageButton
+                android:id="@+id/btnBackevent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:backgroundTint="@color/bgcolor"
+                app:srcCompat="@drawable/back" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearLayout1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/headerweekLL"
+            android:orientation="horizontal"
+            android:layout_marginTop="20dp">
+
+            <ImageButton
+                android:id="@+id/btnLeft"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:backgroundTint="@color/bgcolor"
+                android:onClick="previousWeekAction"
+                app:srcCompat="@drawable/arrow_left_24" />
+
+            <TextView
+                android:id="@+id/monthYearTV"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="4"
+                android:fontFamily="@font/gaegu_bold"
+                android:text="July 2022"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="35dp"
+                app:layout_constraintBottom_toTopOf="@+id/botNavView"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageButton
+                android:id="@+id/btnRight"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:backgroundTint="@color/bgcolor"
+                android:onClick="nextWeekAction"
+                app:srcCompat="@drawable/arrow_right_24" />
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/line"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/calendarLL1"
+            android:layout_marginTop="20dp"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:src="@drawable/dotted_line" />
+
+        <LinearLayout
+            android:id="@+id/linearLayout2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_below="@id/line"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="@font/gaegu_bold"
+                android:text="S"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="25sp" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="@font/gaegu_bold"
+                android:text="M"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="25sp" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="@font/gaegu_bold"
+                android:text="T"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="25sp" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="@font/gaegu_bold"
+                android:text="W"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="25sp" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="@font/gaegu_bold"
+                android:text="TH"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="25sp" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="@font/gaegu_bold"
+                android:text="F"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="25sp" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="@font/gaegu_bold"
+                android:text="S"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="25sp" />
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/dottedLine"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/linearLayout2"
+            android:layout_marginTop="5dp"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:src="@drawable/dotted_line" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/calendarRV"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:layout_marginTop="30dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"/>
+
+        <ImageView
+            android:id="@+id/dottedLine"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txtToDo"
+            android:layout_marginTop="10dp"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:src="@drawable/dotted_line" />
+
+        <Button
+            android:id="@+id/btnAdd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:backgroundTint="@color/yellow"
+            android:fontFamily="@font/gaegu_bold"
+            android:text="Add Event"
+            android:layout_marginTop="5dp"
+            android:textColor="@color/black"
+            android:textSize="18sp" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txtToDo"
+            android:layout_marginTop="5dp"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:src="@drawable/dotted_line" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="5"
+            android:layout_marginTop="15dp"
+            android:scrollbars="vertical"/>
+
+    </LinearLayout>
+
+
+
+</RelativeLayout>

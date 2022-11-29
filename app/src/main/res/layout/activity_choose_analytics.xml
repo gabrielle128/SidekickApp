@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/bgcolor"
+    tools:context=".wallet.chooseAnalytic">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/bgcolor"
+        android:elevation="20dp">
+
+        <ImageButton
+            android:id="@+id/btnBackanalytics"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:backgroundTint="@color/bgcolor"
+            app:srcCompat="@drawable/back" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_weight="4"
+            android:fontFamily="@font/gaegu_bold"
+            android:paddingTop="15dp"
+            android:text="Analytics"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="25dp" />
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center"
+            android:layout_marginRight="30dp"
+            android:background="?selectableItemBackgroundBorderless"
+            android:backgroundTint="@color/bgcolor"
+            android:scaleType="fitXY"
+            app:srcCompat="@drawable/blank" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <!--today card-->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/todayCV"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_row="0"
+            android:layout_rowWeight="1"
+            android:layout_column="0"
+            android:layout_columnWeight="1"
+            android:layout_marginTop="50dp"
+            android:background="@color/bgcolor"
+            app:cardBackgroundColor="@color/bgcolorCV"
+            app:cardCornerRadius="15dp"
+            android:layout_gravity="center">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical|center_horizontal"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/todayBtnImageView"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:src="@drawable/today" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="@font/gaegu_bold"
+                    android:text="Today's Analytics"
+                    android:textAlignment="center"
+                    android:textColor="@color/black"
+                    android:textSize="15sp" />
+
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!--week card-->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/weekCV"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_row="0"
+            android:layout_rowWeight="1"
+            android:layout_column="0"
+            android:layout_columnWeight="1"
+            android:layout_marginTop="50dp"
+            android:background="@color/bgcolor"
+            app:cardBackgroundColor="@color/bgcolorCV"
+            app:cardCornerRadius="15dp"
+            android:layout_gravity="center">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical|center_horizontal"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/weekBtnImageView"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:src="@drawable/week" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="@font/gaegu_bold"
+                    android:text="Week Analytics"
+                    android:textAlignment="center"
+                    android:textColor="@color/black"
+                    android:textSize="15sp" />
+
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!--month card-->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/monthCV"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_row="0"
+            android:layout_rowWeight="1"
+            android:layout_column="0"
+            android:layout_columnWeight="1"
+            android:layout_marginTop="50dp"
+            android:background="@color/bgcolor"
+            app:cardBackgroundColor="@color/bgcolorCV"
+            app:cardCornerRadius="15dp"
+            android:layout_gravity="center">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical|center_horizontal"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/monthBtnImageView"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:src="@drawable/month" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="@font/gaegu_bold"
+                    android:text="Month Analytics"
+                    android:textAlignment="center"
+                    android:textColor="@color/black"
+                    android:textSize="15sp" />
+
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+    </LinearLayout>
+
+</LinearLayout>

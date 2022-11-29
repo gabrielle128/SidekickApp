@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:paddingTop="5dp"
+    android:paddingRight="15dp"
+    android:paddingLeft="15dp"
+    android:paddingBottom="5dp">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardMaxElevation="10dp"
+        app:cardElevation="5dp"
+        android:layout_margin="5dp"
+        android:background="@color/bgcolorCV"
+        app:cardBackgroundColor="@color/bgcolorCV"
+        app:cardCornerRadius="15dp"
+        android:id="@+id/cardview">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:id="@+id/linearlayout"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/item"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="15dp"
+                    android:fontFamily="@font/gaegu_bold"
+                    android:text="Item name"
+                    android:textColor="@color/black"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/amount"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:fontFamily="@font/gaegu_bold"
+                    android:text="₱ 0"
+                    android:textColor="@color/black"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/notes"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:fontFamily="@font/gaegu_bold"
+                    android:text="notes"
+                    android:textColor="@color/black"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/date"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginBottom="15dp"
+                    android:fontFamily="@font/gaegu_bold"
+                    android:text="date"
+                    android:textColor="@color/black"
+                    android:textSize="18sp" />
+
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginRight="20dp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerInParent="true"
+                android:src="@drawable/house">
+
+            </ImageView>
+
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>

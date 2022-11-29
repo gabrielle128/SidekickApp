@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".journal.journaldetails">
+
+    <RelativeLayout
+        android:id="@+id/journalLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/bgcolor">
+
+        <LinearLayout
+            android:id="@+id/header"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/bgcolor"
+            android:elevation="20dp">
+
+            <ImageButton
+                android:id="@+id/btnBack"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="15dp"
+                android:background="?selectableItemBackgroundBorderless"
+                app:srcCompat="@drawable/back" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_weight="4"
+                android:fontFamily="@font/gaegu_bold"
+                android:paddingTop="15dp"
+                android:text="Journal"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="25dp" />
+
+            <ImageButton
+                android:id="@+id/btnToEdit"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_gravity="center"
+                android:layout_marginRight="30dp"
+                android:background="?selectableItemBackgroundBorderless"
+                android:backgroundTint="@color/bgcolor"
+                android:scaleType="fitXY"
+                app:srcCompat="@drawable/edit_note" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/colorTV"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/header"
+            android:fontFamily="@font/gaegu_light"
+            android:paddingRight="15dp"
+            android:text="color palette"
+            android:textAlignment="textEnd"
+            android:textColor="@color/black"
+            android:textSize="12sp"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/timestamp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/header"
+            android:fontFamily="@font/gaegu_light"
+            android:paddingRight="15dp"
+            android:text="timestamp"
+            android:textAlignment="textEnd"
+            android:textColor="@color/bgcolor"
+            android:textSize="12sp"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/dateTime"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/header"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/gaegu_light"
+            android:paddingRight="15dp"
+            android:text="Date and Time"
+            android:textAlignment="textEnd"
+            android:textColor="@color/black"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/titleTV"
+            android:layout_width="400dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/dateTime"
+            android:fontFamily="@font/gaegu_bold"
+            android:padding="15dp"
+            android:text="Title displayed here"
+            android:textColor="@color/black"
+            android:textSize="25sp" />
+
+        <ImageView
+            android:id="@+id/linedetails"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/titleTV"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:src="@drawable/dotted_line" />
+
+        <TextView
+            android:id="@+id/contentTV"
+            android:layout_width="match_parent"
+            android:layout_height="674dp"
+            android:layout_below="@+id/linedetails"
+            android:background="@android:color/transparent"
+            android:fontFamily="@font/gaegu_regular"
+            android:gravity="top|left"
+            android:hint="Enter your journal content here"
+            android:padding="15dp"
+            android:textColor="@color/black"
+            android:textSize="20sp" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

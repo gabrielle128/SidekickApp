@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bgcolor"
+    tools:context=".ToDo">
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/botNavView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:itemBackground="@color/bgcolor"
+        app:itemIconTint="@drawable/selector"
+        app:itemTextColor="@drawable/selector"
+        android:layout_alignParentBottom="true"
+        app:menu="@menu/bottom_navmenu" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/todoFAB"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/add_button"
+        android:backgroundTint="@color/bgcolor"
+        app:maxImageSize="64dp"
+        android:layout_above="@id/botNavView"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="30dp"
+        android:layout_marginBottom="30dp"/>
+
+    <TextView
+        android:id="@+id/txtToDo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/gaegu_bold"
+        android:gravity="center"
+        android:paddingTop="50dp"
+        android:text="To-Do"
+        android:textColor="@color/black"
+        android:textSize="40dp" />
+
+    <ImageView
+        android:id="@+id/dottedLine"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txtToDo"
+        android:layout_marginTop="10dp"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:src="@drawable/dotted_line" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/botNavView"
+        android:layout_below="@id/dottedLine"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/overdueLL"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/txtOverdue"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/gaegu_bold"
+                android:paddingLeft="20dp"
+                android:text="Overdue"
+                android:textColor="@color/red"
+                android:textSize="25dp" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/overdueRV"
+                android:layout_width="match_parent"
+                android:layout_height="75dp"
+                android:scrollbars="vertical" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:src="@drawable/dotted_line" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/todayLL"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/txtToday"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/gaegu_bold"
+                android:paddingLeft="20dp"
+                android:text="Today"
+                android:textColor="#EDB407"
+                android:textSize="25dp" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/todayRV"
+                android:layout_width="match_parent"
+                android:layout_height="75dp"
+                android:scrollbars="vertical" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:src="@drawable/dotted_line" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/upcomingLL"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/txtUpcoming"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/gaegu_bold"
+                android:paddingLeft="20dp"
+                android:text="Upcoming"
+                android:textColor="@android:color/holo_green_dark"
+                android:textSize="25dp" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/upcomingRV"
+                android:layout_width="match_parent"
+                android:layout_height="75dp"
+                android:scrollbars="vertical" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:src="@drawable/dotted_line" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/allTasksLL"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/txtTasks"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/gaegu_bold"
+                android:paddingLeft="20dp"
+                android:text="All Tasks"
+                android:textColor="@color/black"
+                android:textSize="25dp" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/othersRV"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scrollbars="vertical" />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:indeterminateTint="@color/blue"
+        android:visibility="gone"/>
+
+</RelativeLayout>

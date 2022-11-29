@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">Sidekick</string>
+
+    <string-array name="items">
+        <item>Select item</item>
+        <item>Transportation</item>
+        <item>Food</item>
+        <item>House</item>
+        <item>Education</item>
+        <item>Health</item>
+        <item>Personal</item>
+        <item>Apparel</item>
+        <item>Entertainment</item>
+        <item>Online Shopping</item>
+        <item>Others</item>
+    </string-array>
+
+</resources>

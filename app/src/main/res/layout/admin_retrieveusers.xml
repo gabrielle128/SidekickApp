@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="45dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:paddingRight="15dp"
+    android:paddingLeft="15dp">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/usersCard"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="5dp"
+        app:cardMaxElevation="100dp"
+        app:cardElevation="2dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="5dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="7dp"
+            android:layout_marginBottom="7dp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginLeft="10dp"
+                android:src="@drawable/account" />
+
+            <TextView
+                android:id="@+id/emailTV"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="15dp"
+                android:fontFamily="@font/gaegu_regular"
+                android:text="User email"
+                android:textColor="@color/black"
+                android:textSize="18sp" />
+
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>

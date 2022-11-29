@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "521822171757",
+    "firebase_url": "https://sidekick-121cd-default-rtdb.firebaseio.com",
+    "project_id": "sidekick-121cd",
+    "storage_bucket": "sidekick-121cd.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:521822171757:android:fb7238da63082a02228564",
+        "android_client_info": {
+          "package_name": "com.gingineers.sidekick"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "521822171757-p3901t5t8gp4rv348qttmlrhgstp2qnp.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.gingineers.sidekick",
+            "certificate_hash": "1e812835c2c01874150a0efa9562a6674405b9dc"
+          }
+        },
+        {
+          "client_id": "521822171757-ra4bqe1hajeqchv2n9ij84osc5su9jkd.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCMfrr7fOBeBV-NydT-ZObUB_7632GSS0k"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "521822171757-ra4bqe1hajeqchv2n9ij84osc5su9jkd.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bgcolor"
+    tools:context=".Information">
+
+    <LinearLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/bgcolor"
+        android:elevation="20dp">
+
+        <ImageButton
+            android:id="@+id/btnBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:backgroundTint="@color/bgcolor"
+            app:srcCompat="@drawable/back" />
+
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/header">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/logo"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:src="@drawable/sidekick_logo" />
+
+            <TextView
+                android:id="@+id/txtSidekick"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/gaegu_bold"
+                android:gravity="center"
+                android:text="Sidekick"
+                android:textColor="@color/black"
+                android:textSize="40dp" />
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:backgroundTint="@color/bgcolorCV"
+                android:elevation="10dp"
+                app:cardCornerRadius="20dp"
+                app:cardMaxElevation="10dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="5dp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="15dp"
+                        android:src="@drawable/email" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginRight="15dp"
+                        android:fontFamily="@font/gaegu_bold"
+                        android:gravity="center_vertical|center_horizontal"
+                        android:text="gingineers.sidekick@gmail.com"
+                        android:textColor="@color/black"
+                        android:textSize="18dp" />
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/gaegu_bold"
+                android:gravity="center"
+                android:text="Vision"
+                android:textColor="@color/black"
+                android:textSize="20dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:fontFamily="@font/gaegu_regular"
+                android:gravity="center"
+                android:paddingLeft="30dp"
+                android:paddingRight="30dp"
+                android:text="Our Vision is to be a leading software solution company in the technology sector and progress in our current position in the market. We want to be known as the technological industry's reliable, innovative, and user-friendly software service provider."
+                android:textColor="@color/black"
+                android:textSize="15dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:fontFamily="@font/gaegu_bold"
+                android:gravity="center"
+                android:text="Mission"
+                android:textColor="@color/black"
+                android:textSize="20dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:fontFamily="@font/gaegu_regular"
+                android:gravity="center"
+                android:paddingLeft="30dp"
+                android:paddingRight="30dp"
+                android:text="Gin-Gineers is a standalone group of five computer engineering students. Exceed clients’ expectations by going beyond software to provide the best Web solutions that transform data into knowledge, enabling them to solve their problems."
+                android:textColor="@color/black"
+                android:textSize="15dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:fontFamily="@font/gaegu_bold"
+                android:gravity="center"
+                android:text="Team Members"
+                android:textColor="@color/black"
+                android:textSize="20dp" />
+
+            <LinearLayout
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:src="@drawable/d1" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="20dp"
+                    android:fontFamily="@font/gaegu_regular"
+                    android:text="Gabrielle Batralo"
+                    android:textColor="@color/black"
+                    android:textSize="18dp" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:src="@drawable/d2" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="20dp"
+                    android:fontFamily="@font/gaegu_regular"
+                    android:text="Gabrielle Angelo Almazan"
+                    android:textColor="@color/black"
+                    android:textSize="18dp" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="20dp"
+                    android:fontFamily="@font/gaegu_regular"
+                    android:text="Xypher Kelly Bumatay"
+                    android:textColor="@color/black"
+                    android:textSize="18dp" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:src="@drawable/d4" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="20dp"
+                    android:fontFamily="@font/gaegu_regular"
+                    android:text="John Paul Edit"
+                    android:textColor="@color/black"
+                    android:textSize="18dp" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="40dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:src="@drawable/d5" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="20dp"
+                    android:fontFamily="@font/gaegu_regular"
+                    android:text="Lyle Clarence Yang"
+                    android:textColor="@color/black"
+                    android:textSize="18dp" />
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+
+</RelativeLayout>

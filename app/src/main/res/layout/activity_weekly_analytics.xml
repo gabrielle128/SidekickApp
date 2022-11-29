@@ -1,0 +1,999 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bgcolor"
+    android:orientation="vertical"
+    tools:context=".wallet.weeklyAnalytics">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/bgcolor"
+        android:elevation="20dp">
+
+        <ImageButton
+            android:id="@+id/btnBackweekly"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:backgroundTint="@color/bgcolor"
+            app:srcCompat="@drawable/back" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_weight="4"
+            android:fontFamily="@font/gaegu_bold"
+            android:paddingTop="15dp"
+            android:text="Weekly Analytics"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="25dp" />
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center"
+            android:layout_marginRight="30dp"
+            android:background="?selectableItemBackgroundBorderless"
+            android:backgroundTint="@color/bgcolor"
+            android:scaleType="fitXY"
+            app:srcCompat="@drawable/blank" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/totalAmountSpentOn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:fontFamily="@font/gaegu_bold"
+        android:text="Total Amount: ₱ 0"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="25sp" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/dotted_line" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="18dp"
+            android:layout_weight="1"
+            android:src="@drawable/green" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="2"
+            android:fontFamily="@font/gaegu_bold"
+            android:text="Less than 50%"
+            android:textColor="@color/black"
+            android:textSize="12sp" />
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="18dp"
+            android:layout_weight="1"
+            android:src="@drawable/brown" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="2"
+            android:fontFamily="@font/gaegu_bold"
+            android:text="50% - 99%"
+            android:textColor="@color/black"
+            android:textSize="12sp" />
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="18dp"
+            android:layout_weight="1"
+            android:src="@drawable/red" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="2"
+            android:fontFamily="@font/gaegu_bold"
+            android:text="Above 100%"
+            android:textColor="@color/black"
+            android:textSize="12sp" />
+
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/dotted_line" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <!--transporation-->
+            <RelativeLayout
+                android:id="@+id/relativeLayoutTransportation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp">
+
+                <LinearLayout
+                    android:id="@+id/linearLayout1"
+                    android:layout_width="250dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/gaegu_bold"
+                        android:text="Transportation"
+                        android:textColor="@color/black"
+                        android:textSize="20dp" />
+
+                    <TextView
+                        android:id="@+id/analyticsTransportationAmount"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/gaegu_bold"
+                        android:text="0.0"
+                        android:textColor="@color/black"
+                        android:textSize="18dp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/progress_ratio_transport"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="4"
+                            android:fontFamily="@font/gaegu_bold"
+                            android:text="status"
+                            android:textColor="@color/black"
+                            android:textSize="15dp" />
+
+                        <ImageView
+                            android:id="@+id/transport_status"
+                            android:layout_width="0dp"
+                            android:layout_height="15dp"
+                            android:layout_weight="1" />
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/gaegu_bold"
+                        android:text="This week"
+                        android:textColor="@color/black"
+                        android:textSize="15dp" />
+
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_toEndOf="@id/linearLayout1"
+                    android:src="@drawable/transportation" />
+
+            </RelativeLayout>
+
+            <!--food-->
+            <RelativeLayout
+                android:id="@+id/relativeLayoutFood"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp">
+
+                <LinearLayout
+                    android:id="@+id/linearLayout2"
+                    android:layout_width="250dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/gaegu_bold"
+                        android:text="Food"
+                        android:textColor="@color/black"
+                        android:textSize="20dp" />
+
+                    <TextView
+                        android:id="@+id/analyticsFoodAmount"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/gaegu_bold"
+                        android:text="0.0"
+                        android:textColor="@color/black"
+                        android:textSize="18dp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/progress_ratio_food"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="4"
+                            android:fontFamily="@font/gaegu_bold"
+                            android:text="status"
+                            android:textColor="@color/black"
+                            android:textSize="15dp" />
+
+                        <ImageView
+                            android:id="@+id/food_status"
+                            android:layout_width="0dp"
+                            android:layout_height="15dp"
+                            android:layout_weight="1" />
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/gaegu_bold"
+                        android:text="This week"
+                        android:textColor="@color/black"
+                        android:textSize="15dp" />
+
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_toEndOf="@id/linearLayout2"
+                    android:src="@drawable/food" />
+
+            </RelativeLayout>
+
+            <!--house-->
+            <RelativeLayout
+                android:id="@+id/relativeLayoutHouse"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp">
+
+                <LinearLayout
+                    android:id="@+id/linearLayout3"
+                    android:layout_width="250dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/gaegu_bold"
+                        android:text="House"
+                        android:textColor="@color/black"
+                        android:textSize="20dp" />
+
+                    <TextView
+                        android:id="@+id/analyticsHouseAmount"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/gaegu_bold"
+                        android:text="0.0"
+                        android:textColor="@color/black"
+                        android:textSize="18dp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/progress_ratio_house"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="4"
+                            android:fontFamily="@font/gaegu_bold"
+                            android:text="status"
+                            android:textColor="@color/black"
+                            android:textSize="15dp" />
+
+                        <ImageView
+                            android:id="@+id/house_status"
+                            android:layout_width="0dp"
+                            android:layout_height="15dp"
+                            android:layout_weight="1" />
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/gaegu_bold"
+                        android:text="This week"
+                        android:textColor="@color/black"
+                        android:textSize="15dp" />
+
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_margin="10dp"
+                    android:layout_toEndOf="@id/linearLayout3"
+                    android:src="@drawable/house" />
+
+            </RelativeLayout>
+
+            <!--education-->
+            <RelativeLayout
+                android:id="@+id/relativeLayoutEducation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp">
+
+                <LinearLayout
+                    android:id="@+id/linearLayout4"
+                    android:layout_width="250dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/gaegu_bold"
+                        android:text="Education"
+                        android:textColor="@color/black"
+                        android:textSize="20dp" />
+
+                    <TextView
+                        android:id="@+id/analyticsTEducationAmount"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/gaegu_bold"
+                        android:text="0.0"
+                        android:textColor="@color/black"
+                        android:textSize="18dp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/progress_ratio_education"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="4"
+                            android:fontFamily="@font/gaegu_bold"
+                            android:text="status"
+                            android:textColor="@color/black"
+                            android:textSize="15dp" />
+
+                        <ImageView
+                            android:id="@+id/education_status"
+                            android:layout_width="0dp"
+                            android:layout_height="15dp"
+                            android:layout_weight="1" />
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/gaegu_bold"
+                        android:text="This week"
+                        android:textColor="@color/black"
+                        android:textSize="15dp" />
+
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_toEndOf="@id/linearLayout4"
+                    android:src="@drawable/education" />
+
+            </RelativeLayout>
+
+            <!--health-->
+            <RelativeLayout
+                android:id="@+id/relativeLayoutHealth"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp">
+
+                <LinearLayout
+                    android:id="@+id/linearLayout5"
+                    android:layout_width="250dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/gaegu_bold"
+                        android:text="Health"
+                        android:textColor="@color/black"
+                        android:textSize="20dp" />
+
+                    <TextView
+                        android:id="@+id/analyticsHealthAmount"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/gaegu_bold"
+                        android:text="0.0"
+                        android:textColor="@color/black"
+                        android:textSize="18dp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/progress_ratio_health"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="4"
+                            android:fontFamily="@font/gaegu_bold"
+                            android:text="status"
+                            android:textColor="@color/black"
+                            android:textSize="15dp" />
+
+                        <ImageView
+                            android:id="@+id/health_status"
+                            android:layout_width="0dp"
+                            android:layout_height="15dp"
+                            android:layout_weight="1" />
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/gaegu_bold"
+                        android:text="This week"
+                        android:textColor="@color/black"
+                        android:textSize="15dp" />
+
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_margin="10dp"
+                    android:layout_toEndOf="@id/linearLayout5"
+                    android:src="@drawable/health" />
+
+            </RelativeLayout>
+
+            <!--personal-->
+            <RelativeLayout
+                android:id="@+id/relativeLayoutPersonal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp">
+
+                <LinearLayout
+                    android:id="@+id/linearLayout6"
+                    android:layout_width="250dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/gaegu_bold"
+                        android:text="Personal"
+                        android:textColor="@color/black"
+                        android:textSize="20dp" />
+
+                    <TextView
+                        android:id="@+id/analyticsPersonalAmount"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/gaegu_bold"
+                        android:text="0.0"
+                        android:textColor="@color/black"
+                        android:textSize="18dp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/progress_ratio_personal"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="4"
+                            android:fontFamily="@font/gaegu_bold"
+                            android:text="status"
+                            android:textColor="@color/black"
+                            android:textSize="15dp" />
+
+                        <ImageView
+                            android:id="@+id/personal_status"
+                            android:layout_width="0dp"
+                            android:layout_height="15dp"
+                            android:layout_weight="1" />
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/gaegu_bold"
+                        android:text="This week"
+                        android:textColor="@color/black"
+                        android:textSize="15dp" />
+
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_margin="10dp"
+                    android:layout_toEndOf="@id/linearLayout6"
+                    android:src="@drawable/personal" />
+
+            </RelativeLayout>
+
+            <!--apparel-->
+            <RelativeLayout
+                android:id="@+id/relativeLayoutApparel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp">
+
+                <LinearLayout
+                    android:id="@+id/linearLayout7"
+                    android:layout_width="250dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/gaegu_bold"
+                        android:text="Apparel"
+                        android:textColor="@color/black"
+                        android:textSize="20dp" />
+
+                    <TextView
+                        android:id="@+id/analyticsApparelAmount"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/gaegu_bold"
+                        android:text="0.0"
+                        android:textColor="@color/black"
+                        android:textSize="18dp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/progress_ratio_apparel"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="4"
+                            android:fontFamily="@font/gaegu_bold"
+                            android:text="status"
+                            android:textColor="@color/black"
+                            android:textSize="15dp" />
+
+                        <ImageView
+                            android:id="@+id/apparel_status"
+                            android:layout_width="0dp"
+                            android:layout_height="15dp"
+                            android:layout_weight="1" />
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/gaegu_bold"
+                        android:text="This week"
+                        android:textColor="@color/black"
+                        android:textSize="15dp" />
+
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_margin="10dp"
+                    android:layout_toEndOf="@id/linearLayout7"
+                    android:src="@drawable/apparel" />
+
+            </RelativeLayout>
+
+            <!--entertainment-->
+            <RelativeLayout
+                android:id="@+id/relativeLayoutEntertainment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp">
+
+                <LinearLayout
+                    android:id="@+id/linearLayout8"
+                    android:layout_width="250dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/gaegu_bold"
+                        android:text="Entertainment"
+                        android:textColor="@color/black"
+                        android:textSize="20dp" />
+
+                    <TextView
+                        android:id="@+id/analyticsEntertainmentAmount"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/gaegu_bold"
+                        android:text="0.0"
+                        android:textColor="@color/black"
+                        android:textSize="18dp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/progress_ratio_entertainment"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="4"
+                            android:fontFamily="@font/gaegu_bold"
+                            android:text="status"
+                            android:textColor="@color/black"
+                            android:textSize="15dp" />
+
+                        <ImageView
+                            android:id="@+id/entertainment_status"
+                            android:layout_width="0dp"
+                            android:layout_height="15dp"
+                            android:layout_weight="1" />
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/gaegu_bold"
+                        android:text="This week"
+                        android:textColor="@color/black"
+                        android:textSize="15dp" />
+
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_margin="10dp"
+                    android:layout_toEndOf="@id/linearLayout8"
+                    android:src="@drawable/entertainment" />
+
+            </RelativeLayout>
+
+            <!--onlineShopping-->
+            <RelativeLayout
+                android:id="@+id/relativeLayoutShopping"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp">
+
+                <LinearLayout
+                    android:id="@+id/linearLayout9"
+                    android:layout_width="250dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/gaegu_bold"
+                        android:text="Online Shopping"
+                        android:textColor="@color/black"
+                        android:textSize="20dp" />
+
+                    <TextView
+                        android:id="@+id/analyticsShoppingAmount"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/gaegu_bold"
+                        android:text="0.0"
+                        android:textColor="@color/black"
+                        android:textSize="18dp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/progress_ratio_shopping"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="4"
+                            android:fontFamily="@font/gaegu_bold"
+                            android:text="status"
+                            android:textColor="@color/black"
+                            android:textSize="15dp" />
+
+                        <ImageView
+                            android:id="@+id/shopping_status"
+                            android:layout_width="0dp"
+                            android:layout_height="15dp"
+                            android:layout_weight="1" />
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/gaegu_bold"
+                        android:text="This week"
+                        android:textColor="@color/black"
+                        android:textSize="15dp" />
+
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_margin="10dp"
+                    android:layout_toEndOf="@id/linearLayout9"
+                    android:src="@drawable/shopping" />
+
+            </RelativeLayout>
+
+            <!--others-->
+            <RelativeLayout
+                android:id="@+id/relativeLayoutOthers"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp">
+
+                <LinearLayout
+                    android:id="@+id/linearLayout10"
+                    android:layout_width="250dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/gaegu_bold"
+                        android:text="Others"
+                        android:textColor="@color/black"
+                        android:textSize="20dp" />
+
+                    <TextView
+                        android:id="@+id/analyticsOthersAmount"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/gaegu_bold"
+                        android:text="0.0"
+                        android:textColor="@color/black"
+                        android:textSize="18dp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/progress_ratio_others"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="4"
+                            android:fontFamily="@font/gaegu_bold"
+                            android:text="status"
+                            android:textColor="@color/black"
+                            android:textSize="15dp" />
+
+                        <ImageView
+                            android:id="@+id/others_status"
+                            android:layout_width="0dp"
+                            android:layout_height="15dp"
+                            android:layout_weight="1" />
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/gaegu_bold"
+                        android:text="This week"
+                        android:textColor="@color/black"
+                        android:textSize="15dp" />
+
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_toEndOf="@id/linearLayout10"
+                    android:src="@drawable/others" />
+
+            </RelativeLayout>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:layout_marginTop="5dp"
+                android:src="@drawable/dotted_line" />
+
+<!--            <com.anychart.AnyChartView-->
+<!--                android:id="@+id/anyChartView"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="600dp" />-->
+
+<!--            <ImageView-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:paddingLeft="15dp"-->
+<!--                android:paddingRight="15dp"-->
+<!--                android:layout_marginTop="5dp"-->
+<!--                android:src="@drawable/dotted_line" />-->
+
+            <RelativeLayout
+                android:id="@+id/relativeLayoutAnalysis"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="15dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:id="@+id/linearLayout11"
+                    android:layout_width="250dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Summary Spending Status"
+                        android:fontFamily="@font/gaegu_bold"
+                        android:textColor="@color/black"
+                        android:textSize="20dp"/>
+
+                    <TextView
+                        android:id="@+id/totalSpent"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Total Spent: ₱ 0"
+                        android:fontFamily="@font/gaegu_bold"
+                        android:textColor="@color/black"
+                        android:textSize="20dp"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/monthRatioSpending"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="4"
+                            android:text="status"
+                            android:fontFamily="@font/gaegu_bold"
+                            android:textColor="@color/black"
+                            android:textSize="15dp"/>
+
+                        <ImageView
+                            android:id="@+id/monthRatioSpending_Image"
+                            android:layout_width="0dp"
+                            android:layout_height="15dp"
+                            android:layout_weight="1" />
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/gaegu_bold"
+                        android:text="This week"
+                        android:textColor="@color/black"
+                        android:layout_marginTop="5dp"
+                        android:textSize="15dp" />
+
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_margin="10dp"
+                    android:layout_toEndOf="@+id/linearLayout11"
+                    android:src="@drawable/week" />
+
+            </RelativeLayout>
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

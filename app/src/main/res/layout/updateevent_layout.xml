@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:elevation="10dp"
+    app:cardElevation="10dp"
+    android:layout_marginTop="10dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/addeventTV"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Update Event"
+            android:fontFamily="@font/gaegu_bold"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:layout_marginTop="10dp"
+            android:gravity="center"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <EditText
+                android:id="@+id/eventNameET"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Event Title"
+                android:textColor="@color/black"
+                android:fontFamily="@font/gaegu_regular"
+                android:textSize="20sp"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"/>
+
+            <EditText
+                android:id="@+id/eventContentET"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:fontFamily="@font/gaegu_regular"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:hint="Enter your event description here"
+                android:textSize="18sp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="10dp">
+
+                <ImageView
+                    android:id="@+id/btnDate"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:src="@drawable/date"
+                    />
+
+                <TextView
+                    android:id="@+id/dateTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:hint="Select date"
+                    android:fontFamily="@font/gaegu_bold"
+                    android:textColor="@color/black"
+                    android:textSize="18sp"
+                    android:gravity="center_vertical"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="25dp"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="10dp">
+
+                <ImageView
+                    android:id="@+id/btnTime"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:src="@drawable/time"/>
+
+                <TextView
+                    android:id="@+id/timeTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:hint="Select time"
+                    android:fontFamily="@font/gaegu_bold"
+                    android:textColor="@color/black"
+                    android:textSize="18sp"
+                    android:gravity="center_vertical"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="25dp"/>
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/timestampTV"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="20dp"
+                android:fontFamily="@font/gaegu_bold"
+                android:textColor="@color/black"
+                android:textSize="5sp"
+                android:visibility="gone"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:orientation="horizontal">
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+
+                <Button
+                    android:id="@+id/btnDelete"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="2dp"
+                    android:layout_marginTop="2dp"
+                    android:layout_marginEnd="2dp"
+                    android:layout_marginBottom="2dp"
+                    android:backgroundTint="@color/yellow"
+                    android:fontFamily="@font/gaegu_bold"
+                    android:text="Delete"
+                    android:textAllCaps="false"
+                    android:textColor="@color/black"
+                    android:textSize="15sp" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+
+                <Button
+                    android:id="@+id/btnUpdate"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="2dp"
+                    android:layout_marginTop="2dp"
+                    android:layout_marginEnd="2dp"
+                    android:layout_marginBottom="2dp"
+                    android:backgroundTint="@color/yellow"
+                    android:fontFamily="@font/gaegu_bold"
+                    android:text="Update"
+                    android:textAllCaps="false"
+                    android:textColor="@color/black"
+                    android:textSize="15sp" />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

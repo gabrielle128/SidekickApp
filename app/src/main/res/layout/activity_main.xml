@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bgcolor"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/txtSidekick"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:fontFamily="@font/gaegu_bold"
+        android:text="Sidekick"
+        android:textColor="@color/black"
+        android:textSize="80dp" />
+
+    <Button
+        android:id="@+id/btnSignUp"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txtSidekick"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="60dp"
+        android:backgroundTint="@color/yellow"
+        android:fontFamily="@font/gaegu_bold"
+        android:text="Sign up"
+        android:textAllCaps="false"
+        android:textColor="@color/black"
+        android:textSize="25dp" />
+
+    <Button
+        android:id="@+id/btnLogIn"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/blue"
+        android:fontFamily="@font/gaegu_bold"
+        android:text="Log in"
+        android:textColor="@color/black"
+        android:textSize="25dp"
+        android:layout_below="@+id/btnSignUp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:textAllCaps="false"/>
+
+</RelativeLayout>

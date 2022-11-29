@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bgcolor"
+    tools:context=".Journal">
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/botNavView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:itemBackground="@color/bgcolor"
+        app:itemIconTint="@drawable/selector"
+        app:itemTextColor="@drawable/selector"
+        android:layout_alignParentBottom="true"
+        app:menu="@menu/bottom_navmenu"/>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/journalFAB"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/add_button"
+        android:backgroundTint="@color/bgcolor"
+        app:maxImageSize="64dp"
+        android:layout_above="@id/botNavView"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="30dp"
+        android:layout_marginBottom="30dp">
+
+    </com.google.android.material.floatingactionbutton.FloatingActionButton>
+
+    <TextView
+        android:id="@+id/txtJournal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/gaegu_bold"
+        android:gravity="center"
+        android:paddingTop="40dp"
+        android:text="Journal"
+        android:textColor="@color/black"
+        android:textSize="50dp" />
+
+    <ImageView
+        android:id="@+id/dottedLine"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txtJournal"
+        android:layout_marginTop="10dp"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:src="@drawable/dotted_line" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/journalRV"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/dottedLine"
+        android:layout_above="@id/botNavView"
+        android:paddingTop="15dp"
+        android:scrollbars="vertical">
+
+    </androidx.recyclerview.widget.RecyclerView>
+
+</RelativeLayout>

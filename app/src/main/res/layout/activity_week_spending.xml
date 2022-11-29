@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/bgcolor"
+    tools:context=".wallet.weekSpending">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/bgcolor"
+        android:elevation="20dp">
+
+        <ImageButton
+            android:id="@+id/btnBackweek"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:backgroundTint="@color/bgcolor"
+            app:srcCompat="@drawable/back" />
+
+        <TextView
+            android:id="@+id/txtHeader"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_weight="4"
+            android:fontFamily="@font/gaegu_bold"
+            android:paddingTop="15dp"
+            android:text="Spending"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="25dp" />
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center"
+            android:layout_marginRight="30dp"
+            android:background="?selectableItemBackgroundBorderless"
+            android:backgroundTint="@color/bgcolor"
+            android:scaleType="fitXY"
+            app:srcCompat="@drawable/blank" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/totalWeekAmount"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:fontFamily="@font/gaegu_bold"
+        android:text="Total Spending: ₱ 0"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="25sp" />
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/totalbudgetTV">
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical|center_horizontal"
+            android:indeterminateTint="@color/blue" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/todayRV"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+</LinearLayout>

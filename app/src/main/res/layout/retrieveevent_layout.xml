@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingRight="15dp"
+    android:paddingLeft="15dp">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/todoCard"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="5dp"
+        app:cardMaxElevation="100dp"
+        app:cardElevation="2dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginBottom="5dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="7dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_marginLeft="10dp"
+                    android:src="@drawable/date" />
+
+                <TextView
+                    android:id="@+id/date"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="8dp"
+                    android:fontFamily="@font/gaegu_bold"
+                    android:text="Date"
+                    android:textColor="@color/black"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="10dp"
+                    android:fontFamily="@font/gaegu_bold"
+                    android:text="Event"
+                    android:textColor="@color/black"
+                    android:textSize="20sp" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp">
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/time"
+                    android:layout_marginLeft="10dp"/>
+
+                <TextView
+                    android:id="@+id/time"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:textSize="18sp"
+                    android:fontFamily="@font/gaegu_bold"
+                    android:textColor="@color/black"
+                    android:text="Time"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="8dp"/>
+
+                <TextView
+                    android:id="@+id/content"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:textSize="18sp"
+                    android:fontFamily="@font/gaegu_bold"
+                    android:textColor="@color/black"
+                    android:text="Content"
+                    android:layout_gravity="center_vertical"/>
+
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/timestamp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="20dp"
+                android:fontFamily="@font/gaegu_bold"
+                android:textColor="@color/black"
+                android:textSize="5sp"
+                android:visibility="gone"/>
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+
+
+</RelativeLayout>
